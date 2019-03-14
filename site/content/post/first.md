@@ -8,7 +8,8 @@ different features that make GatorGrader.
 Designed to help check students work and inform of them any errors concerning
 their work, the tool employ many command line arguments that provide multiple
 checks to ensure you configure the tool with the correct command-line arguments.
-The following indicates the different arguments GatorGrader uses and what they do.
+The following indicates the different command line arguments GatorGrader uses and
+what they do.
 
 <!--more...-->
 ---
