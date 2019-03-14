@@ -10,7 +10,7 @@ paginate = 10
 canonifyurls = true
 
 [params]
-  description = "this is my description"
+  description = "Welcome"
   cover = "images/cover.jpg"
   author = "Matthew Baldeosingh"
   authorlocation = "Brooklyn, New York"
