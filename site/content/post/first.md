@@ -8,9 +8,7 @@ Designed to help check students work and inform of them any errors concerning th
 
 ---
 # more
-
-!--more--
-
+---
 ```
 usage: gatorgrader.py [-h] [--nowelcome] [--json] [--commits COMMITS]
                       [--directory DIR] [--file FILE] [--exists]
