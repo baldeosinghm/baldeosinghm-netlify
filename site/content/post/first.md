@@ -10,7 +10,7 @@ their work, the tool employ many command line arguments that provide multiple
 checks to ensure you configure the tool with the correct command-line arguments.
 The following indicates the different arguments GatorGrader uses and what they do.
 
-<!--Using GatorGrader and More...-->
+<!--more...-->
 ---
 
 ```
