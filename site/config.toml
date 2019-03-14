@@ -1,6 +1,6 @@
 baseurl = "/"
 languageCode = "en-us"
-title = "Casper Theme"
+title = "Matthew Baldeosingh's Home"
 theme = "hugo-theme-casper"
 disqusShortname = "spf13"
 # Enable Google Analytics by inserting your tracking code
