@@ -12,8 +12,8 @@ canonifyurls = true
 [params]
   description = "this is my description"
   cover = "images/cover.jpg"
-  author = "Valère JEANTET"
-  authorlocation = "Paris, France"
+  author = "Matthew Baldeosingh"
+  authorlocation = "Brooklyn, New York"
   authorwebsite = "http://vjeantet.fr"
   bio= "my bio"
   logo = "images/logo.png"
