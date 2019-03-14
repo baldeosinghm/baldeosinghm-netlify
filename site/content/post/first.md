@@ -2,10 +2,13 @@
 date: 2019-03-12T20:04:40.407Z
 title: Developing GatorGrader
 ---
-During my Spring Semester 2019, I worked with a team to contribute to the different features that make GatorGrader.
+During my Spring Semester 2019, I worked with a team to contribute to the
+different features that make GatorGrader.
 
-Designed to help check students work and inform of them any errors concerning their work, the tool employ many command line arguments that provide multiple checks to ensure you configure the tool with the correct command-line arguments. The following indicates the different arguments GatorGrader uses and what they do.
-
+Designed to help check students work and inform of them any errors concerning
+their work, the tool employ many command line arguments that provide multiple
+checks to ensure you configure the tool with the correct command-line arguments.
+The following indicates the different arguments GatorGrader uses and what they do.
 ---
 ```
 usage: gatorgrader.py [-h] [--nowelcome] [--json] [--commits COMMITS]
@@ -36,12 +39,25 @@ optional arguments:
   --exact               equals instead of a minimum number (default: False)
 ```
 
-GatorGrader can be used with other tools to provide supplemental information and even more checks of source code and technical writing.
+GatorGrader can be used with other tools to provide supplemental information and
+even more checks of source code and technical writing.
 
-During this class I worked on two issues with my fellow team members and one issue by myself. The first issue I worked on, has functioning code that brings the feature of checking for issues created, discussed, and then closed. I added a function that can get a specific issue and gets access from GitHub to print the specific issue called for by the student. The second aspect of the function is that it will state whether that issue if closed or open, and if need be the student can print all of either.
+During this class I worked on two issues with my fellow team members and one
+issue by myself. The first issue I worked on, has functioning code that brings
+the feature of checking for issues created, discussed, and then closed. I added
+a function that can get a specific issue and gets access from GitHub to print the
+specific issue called for by the student. The second aspect of the function is
+that it will state whether that issue if closed or open, and if need be the
+student can print all of either.
 
-The second issue I worked on is creating a logo for GatorGrader with my fellow teammate Christian Walker. I helped create the logo and then I detail the project summary in the README.md.
+The second issue I worked on is creating a logo for GatorGrader with my fellow
+teammate Christian Walker. I helped create the logo and then I detail the project
+summary in the README.md.
 
-The final issue that I began working on was checking commit messages for fragments and/or length. The function that I began working on will check for non-alphanumeric characters and determine whether the characters are not valid characters. The aim of this function is to determine students reactions toward fixing an issue (expressed by emojis) and then capture those emotions.
+The final issue that I began working on was checking commit messages for fragments
+and/or length. The function that I began working on will check for non-alphanumeric
+characters and determine whether the characters are not valid characters. The aim
+of this function is to determine students reactions toward fixing an issue
+(expressed by emojis) and then capture those emotions.
 
 Link to GitHub repository: https://github.com/GatorEducator/gatorgrader
