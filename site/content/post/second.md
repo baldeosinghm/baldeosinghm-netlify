@@ -6,11 +6,11 @@ title: Petition Pronto
 Petition Pronto is a web application that allows students at Allegheny College to
 submit a petition to professors (petitions are student submitted forms requesting
 approval to add additional classes, remove classes, etc.). Professors are notified
-that a petition request was submitted and decide whether or not to approve the
-petitions or not. Depending on the decision, an email will be sent to the student
-notifying them that their peition was either approved or not. Currently, our program
-only runs locally and so students will have to access the tool from the terminal.
-To run the program, one would:
+by the website via an email that a petition request was submitted and decide
+whether or not to approve the petitions or not. Depending on the decision, an email
+will be sent to the student notifying them that their petition was either approved
+or not. Currently, our program runs locally and so students will have to access
+the tool from the terminal. To run the program, one would:
 
 1. Navigate to the `\src` folder in terminal
 2. Run `python3 app.py` (assuming python3 is installed)
@@ -60,7 +60,7 @@ but my teammates who were more familiar with flask were able to get that set up
 easily.
 
 Thank you for taking the time to learn about Petition Pronto and the work I've
-put into it. If you're interested in learning more then please navigate to my
+put into it. If you're interested in learning more then please navigate to
 the application's Github repository (see below).
 
 Link to GitHub repository: https://github.com/GatorEducator/petition-pronto
