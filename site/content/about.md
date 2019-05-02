@@ -2,6 +2,7 @@
 date = "2019-14-03T10:15:23-04:00"
 draft = false
 title = "About Me"
+type = "layout"
 
 +++
 
