@@ -5,4 +5,4 @@ title = "About Me"
 
 +++
 
-## My name is Matthew Baldeosingh and I am a Computer Science Major at Allegheny College.
+My name is Matthew Baldeosingh and I am a Computer Science Major at Allegheny College.
