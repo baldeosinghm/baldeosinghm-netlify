@@ -2,67 +2,65 @@
 date: 2019-05-1T20:04:40.407Z
 title: Petition Pronto
 ---
-<h4>My Hugo Blog</h4>
-During my Spring Semester 2019, I worked with a team to contribute to the
-different features that make GatorGrader.
+<h4>What is Petition Pronto?</h4>
+Petition Pronto is a web application that allows students at Allegheny College to
+submit a petition to professors (petitions are student submitted forms requesting
+approval to add additional classes, remove classes, etc.). Professors are notified
+that a petition request was submitted and decide whether or not to approve the
+petitions or not. Depending on the decision, an email will be sent to the student
+notifying them that their peition was either approved or not. Currently, our program
+only runs locally and so students will have to access the tool from the terminal.
+To run the program, one would:
 
-Designed to help check students work and inform of them any errors concerning
-their work, the tool employ many command line arguments that provide multiple
-checks to ensure you configure the tool with the correct command-line arguments.
-The following indicates the different command line arguments GatorGrader uses and
-what they do.
+1. Navigate to the `\src` folder in terminal
+2. Run `python3 app.py` (assuming python3 is installed)
 
 <!--more...-->
 ---
 
+<h4>My Contributions</h4>
+Throughout the course of this project, I worked on creating a important piece of
+functionality for the application: an email handler. Petition Pronto is exceptional
+in that it sends emails to the students notifying them on whether or not their
+petition was approved or not. The email handler went through several iterations
+of refactored code until it was finally completely functional and was connected
+to the database. Below is an excerpt of code from the module containing the email
+handler of the project.
+
 ```
-usage: gatorgrader.py [-h] [--nowelcome] [--json] [--commits COMMITS]
-                      [--directory DIR] [--file FILE] [--exists]
-                      [--single COUNT] [--multiple COUNT]
-                      [--language {Java,Python}] [--paragraphs COUNT]
-                      [--words WORDS] [--command COMMAND] [--executes]
-                      [--fragment FRAGMENT] [--count COUNT] [--exact]
-
-optional arguments:
-  -h, --help            show this help message and exit
-  --nowelcome           do not display the welcome message (default: False)
-  --json                print reports in JSON (default: False)
-  --commits COMMITS     minimum number of git commits (default: None)
-  --directory DIR       directory with file for checking (default: None)
-  --file FILE           file for checking (default: None)
-  --exists              does a file in a directory exist (default: False)
-  --single COUNT        minimum number of single comments (default: None)
-  --multiple COUNT      minimum number of multi comments (default: None)
-  --language {Java,Python}
-                        language for the single comments (default: None)
-  --paragraphs COUNT    minimum number of paragraphs (default: None)
-  --words WORDS         minimum number of words in paragraphs (default: None)
-  --command COMMAND     command to run (default: None)
-  --executes            does a command execute without error (default: False)
-  --fragment FRAGMENT   fragment that exists in code or output (default: None)
-  --count COUNT         how many of an entity should exist (default: None)
-  --exact               equals instead of a minimum number (default: False)
+def send_email(subject, msg, EMAIL_RECIEVER):
+    """Email a person with subject and message."""
+    try:
+        server = smtplib.SMTP('smtp.gmail.com:587')
+        server.ehlo()
+        server.starttls()
+        server.login(config.EMAIL_ADDRESS, config.PASSWORD)
+        message = 'Subject: {}\n\n{}'.format(subject, msg)
+        server.sendmail(EMAIL_RECIEVER, EMAIL_RECIEVER, message)
+        server.quit()
+        print("Success: Email sent!")
+    except:
+        print("Email failed to send.")
 ```
+The function `send_email` sends an email message containing a subject and a message.
+The function takes three arguments: subject, message, and email receiver. We used
+the smtp library to be able to access the email server and send emails to any student.
+Those students are accessed from a text file that contains their names and their
+student email address. When the email is sent, it will print `"Success: Email sent!"`.
+However, in the event that the email does not go through, we will get `"Email failed
+to send."`
 
-GatorGrader can be used with other tools to provide supplemental information and
-even more checks of source code and technical writing.
+<h4>Project Challenges</h4>
+The biggest challenge that I faced with developing this software tool was configuring
+the email handler. Initially we tested sending emails, but we were unable to send
+it to only emails that were not associated with the college. We were able to
+circumnavigate the problem in the end, but it turned out to not be a difficult fix.
+Otherwise, the next biggest challenge was connecting the feature to the database,
+but my teammates who were more familiar with flask were able to get that set up
+easily.
 
-During this class I worked on two issues with my fellow team members and one
-issue by myself. The first issue I worked on, has functioning code that brings
-the feature of checking for issues created, discussed, and then closed. I added
-a function that can get a specific issue and gets access from GitHub to print the
-specific issue called for by the student. The second aspect of the function is
-that it will state whether that issue if closed or open, and if need be the
-student can print all of either.
-
-The second issue I worked on is creating a logo for GatorGrader with my fellow
-teammate Christian Walker. I helped create the logo and then I detail the project
-summary in the README.md.
-
-The final issue that I began working on was checking commit messages for fragments
-and/or length. The function that I began working on will check for non-alphanumeric
-characters and determine whether the characters are not valid characters. The aim
-of this function is to determine students reactions toward fixing an issue
-(expressed by emojis) and then capture those emotions.
+Thank you for taking the time to learn about Petition Pronto and the work I've
+put into it. If you're interested in learning more then please navigate to my
+the application's Github repository (see below).
 
 Link to GitHub repository: https://github.com/GatorEducator/petition-pronto
