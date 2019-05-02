@@ -2,7 +2,7 @@
 date: 2019-05-1T20:04:40.407Z
 title: Petition Pronto
 ---
-<h1>My Hugo Blog</h1>
+<h3>My Hugo Blog</h1>
 During my Spring Semester 2019, I worked with a team to contribute to the
 different features that make GatorGrader.
 
